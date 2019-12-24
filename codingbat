@@ -1,0 +1,40 @@
+
+
+String-2 > bobThere
+public boolean bobThere(String str) {
+  int len = str.length();
+  
+  for (int i = 0; i < len - 2; i++) {
+    if (str.charAt(i) == 'b' && str.charAt(i+2) == 'b')
+    return true;
+  }
+  return false;
+}
+String-2 > doubleChar
+
+public String doubleChar(String str) {
+String res="";
+for(int i=0;i<str.length();i++){
+res=res+str.charAt(i)+ str.charAt(i);
+}
+return res;
+}
+
+
+String-2 > countCode
+
+public int countCode(String str) {
+  int len = str.length();
+  int count = 0;
+  String o = "co";
+  String e = "e";
+   
+  if (len < 4)
+    return 0;
+for (int i = 0; i < len - 3; i++) {
+
+    if (o.compareTo(str.substring(i,i+2)) == 0 && e.compareTo(str.substring(i+3, i+4)) == 0)
+    count++;
+  }
+return count;
+}
